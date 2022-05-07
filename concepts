@@ -1,0 +1,28 @@
+
+Generic Types
+A generic type is a generic class or interface that is parameterized over types. The following Box class will be modified to demonstrate the concept.
+
+A Simple Box Class
+Begin by examining a non-generic Box class that operates on objects of any type. It needs only to provide two methods: set, which adds an object to the box, and get, which retrieves it:
+
+public class Box {
+    private Object object;
+
+    public void set(Object object) { this.object = object; }
+    public Object get() { return object; }
+}
+Since its methods accept or return an Object, you are free to pass in whatever you want, provided
+that it is not one of the primitive types. There is no way to verify, at compile time, how the class
+ is used. One part of the code may place an Integer in the box and expect to get Integers out of it,
+  while another part of the code may mistakenly pass in a String, resulting in a runtime error.
+
+Generics was added in Java 5 to provide compile-time type checking and removing risk of ClassCastException
+ that was common while working with collection classes
+
+
+ https://www.journaldev.com/1663/java-generics-example-method-class-interface
+
+
+
+
+
